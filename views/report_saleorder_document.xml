@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_custom" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[contains(@class, 'oe_structure')]" position="before">
+            <div>
+                <p> <span t-esc="doc.project_reference or 'N/A'"/></p>
+                <p> <span t-esc="doc.custom_field or 'N/A'"/></p>
+            </div>
+        </xpath>
+    </template>
+</odoo>
